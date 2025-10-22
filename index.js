@@ -60,7 +60,7 @@ app.post('/new-data', (req, res) => {
   //Step 16 store the new message data in the existing data array
   //dafaultData.relay.push(newEntry);
 
-  //step 25 write a new entry to the databse, not the defaultData array, in the app.post route
+  //step 25 write a new entry to the databse, not the defaultData array, in the app.post route. Saves permanently to db.json file.
   db.data.relay.push(newEntry);
   db.write().then(() => { 
   //send a message back to the client
@@ -75,7 +75,7 @@ app.post('/new-data', (req, res) => {
 
 ///ROUTE 3 SERVER SIDE Serve stored data back to users///
 
-//Step 5 create the route to serve the data. Before lowdb,the server was ready to return a samll JSON packet when /data is required. 
+//Step 5 create the route to serve the data. Before lowdb,the server was ready to return a samll JSON packet when /data is required. Each time they reload the page, old entries reappear.
 app.get('/data', (req, res) => {
   //step 26 read the entry from the database, not the defaultRelay array, in the app.get route
   db.read().then(() => {
