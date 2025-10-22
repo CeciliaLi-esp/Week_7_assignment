@@ -20,5 +20,6 @@
   "bugs": {
     "url": "https://github.com/CeciliaLi-esp/Week_7_assignment/issues"
   },
-  "homepage": "https://github.com/CeciliaLi-esp/Week_7_assignment#readme"
+  "homepage": "https://github.com/CeciliaLi-esp/Week_7_assignment#readme",
+  "devDependencies": {}
 }

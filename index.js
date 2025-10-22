@@ -1,11 +1,11 @@
 // let defaultRelay = [
 //   {
-//     emotion: "loneliness",
-//     response: "When I moved into a new city and my boxes were still unpacked, and I also felt"
+//     emotion: "lonely",
+//     response: "When I moved into a new city and my boxes were still unpacked, and I also felt hopeful"
 //   },
 //   {
-//     emotion: "hope",
-//     response: "When I finally saw the morning light through my curtains, and I also felt"
+//     emotion: "hopeful",
+//     response: "When I finally saw the morning light through my curtains, and I also felt tired"
 //   }
 // ];
 
@@ -73,9 +73,9 @@ app.post('/new-data', (req, res) => {
 
 ///////
 
-///ROUTE 3 Serve stored data back to users///
+///ROUTE 3 SERVER SIDE Serve stored data back to users///
 
-//Step 5 create the route to serve the data
+//Step 5 create the route to serve the data. Before lowdb,the server was ready to return a samll JSON packet when /data is required. 
 app.get('/data', (req, res) => {
   //step 26 read the entry from the database, not the defaultRelay array, in the app.get route
   db.read().then(() => {

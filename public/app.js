@@ -4,14 +4,14 @@ console.log("JS file is connected!");
 // -----------------------------
 //  GET EXISTING DATA ON PAGE LOAD
 // -----------------------------
-
-//Step 6 use fetch() to make a GET request for the data
+////Route 3 CLIENT SIDE/////
+//Step 6 use fetch() to make a GET request for the data. User opens the webpage.
 fetch('/data')
   .then(response => response.json())
   .then(allData => {
     console.log(allData);
 
-    //step 7 add the data to the page
+    //step 7 add the data to the page. User sees existing messages displayed on the page.
     let feed = document.getElementById('feed');
     for (let i = 0; i < allData.length; i++) {
       let item = allData[i];
@@ -21,6 +21,8 @@ fetch('/data')
     }
   })
   .catch(error => console.log(error));
+
+
 
 //step 27 check the fetch on window load to make sure the messages are still displaying
 
