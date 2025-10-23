@@ -30,7 +30,7 @@ const app = express();
 
 ///ROUTE 1 Deliver the front-end files.///
 
- // Serve static files
+ // Serve static files 
 app.use(express.static('public'));
 
 /////
